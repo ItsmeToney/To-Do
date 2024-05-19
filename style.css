@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Space Mono", monospace;
 }
 
 .main {
@@ -116,4 +117,42 @@ h1 {
 }
 .selected_list {
   background-color: #f3f3f3;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    margin-top: 20px;
+  }
+  .container {
+    width: 100%;
+  }
+
+  .add-label {
+    font-size: 13px;
+  }
+  .add-work {
+    height: 1.5rem;
+    width: 50%;
+    padding: 0.2rem 0.5rem;
+    font-size: 13px;
+    color: #3a3b3c;
+  }
+  .add-list,
+  .list-container {
+    margin: 2rem 0.3rem;
+  }
+  .circle {
+    height: 0.9rem;
+    width: 0.9rem;
+    transform: translateY(40%);
+  }
+  .lists {
+    height: 2.5rem;
+    padding: 0.5rem;
+    margin: 1rem 0;
+  }
+  .btn {
+    height: 1.5rem;
+    width: 3rem;
+  }
 }
