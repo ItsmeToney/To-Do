@@ -9,11 +9,12 @@ const addList = function () {
   const newWork = newList.value;
   if (newWork !== "") {
     newList.value = "";
-    const html = ` <div class="lists list">
+    const html = ` <div class="lists" >
+        <button class="circle">&#x2714;</button>
         <div class="content"> ${newWork}</div>
         <button class="btn delete-btn">&#x232B;</button>
         </div>`;
-    listContainer.insertAdjacentHTML("beforeend", html);
+    listContainer.insertAdjacentHTML("afterbegin", html);
   }
 };
 
@@ -23,6 +24,13 @@ listContainer.addEventListener("click", function (e) {
   if (!e.target.classList.contains("delete-btn")) return;
   const currentList = e.target.closest(".lists");
   currentList.remove();
+});
+
+listContainer.addEventListener("click", function (e) {
+  if (!e.target.classList.contains("circle")) return;
+  const selectedList = e.target.closest(".lists");
+  e.target.classList.toggle("selected");
+  selectedList.classList.toggle("selected_list");
 });
 
 document.addEventListener("keydown", function (e) {

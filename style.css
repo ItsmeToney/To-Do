@@ -27,6 +27,7 @@ h1 {
   margin: 2rem;
   background-image: linear-gradient(to top left, #39b385, #9be15d);
   border-radius: 1rem;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 .add-list {
@@ -60,6 +61,8 @@ h1 {
   color: #fff;
   border: none;
   border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
   transition: all 0.15s;
   outline: none;
 }
@@ -67,24 +70,50 @@ h1 {
   opacity: 0.7;
 }
 .add-btn {
-  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+  background-color: rgb(209, 145, 50);
 }
 .delete-btn {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.circle {
+  height: 0.9rem;
+  width: 0.9rem;
+  border-radius: 50%;
+  color: white;
+  background-color: white;
+  border: none;
+  transform: translateY(25%);
+}
+.selected {
+  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
 }
 .list-container {
   height: 250px;
+  padding: 0 0.5rem;
   margin: 2rem;
   overflow-y: scroll;
-  background-color: #fff;
   border-radius: 1rem;
+}
+.list-container::-webkit-scrollbar {
+  width: 0;
+}
+.content {
+  flex: 2;
+  margin-left: 1rem;
 }
 
 .lists {
-  height: 3rem;
+  height: 3.5rem;
   padding: 1rem;
-
   display: flex;
   justify-content: space-between;
-  border: 2px solid #f3f3f3;
+  border: none;
+  border-radius: 3rem;
+  background-color: rgba(246, 246, 246, 0.6);
+  margin: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+.selected_list {
+  background-color: #f3f3f3;
 }
